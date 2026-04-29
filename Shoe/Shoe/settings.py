@@ -96,8 +96,8 @@ WSGI_APPLICATION = 'Shoe.Shoe.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'register',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
         'USER': 'root',
         'PASSWORD': 'Siboni@2004',
         'HOST': 'localhost',

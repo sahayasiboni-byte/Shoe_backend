@@ -1,0 +1,473 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-04-29T06:10:20.376Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Sneaker",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-04-29T06:11:07.217Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Boots",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-04-29T06:11:27.080Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Formal",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-04-29T06:11:49.616Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Running",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-04-29T06:12:04.659Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Oxford",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-04-29T06:12:22.690Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Sports Shoe",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-04-29T06:12:43.413Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "High Neck",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-04-29T06:12:59.069Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "Loafer",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-04-29T06:13:54.882Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Stride Sneakers",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-04-29T06:14:41.380Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Thrivo Oxford Shoe",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-04-29T06:15:27.634Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "Strideon Boot",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-04-29T06:16:11.858Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "Formal Shoe",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-04-29T06:16:48.072Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "Casual Sneaker",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-04-29T06:17:25.376Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "Running Shoe",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-04-29T06:18:25.670Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "7",
+    "object_repr": "Sports Shoe",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-04-29T06:19:07.717Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "8",
+    "object_repr": "High Neck",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-04-29T06:19:51.360Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "9",
+    "object_repr": "Loafer",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-04-29T06:20:40.680Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "10",
+    "object_repr": "Sneaker",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$fyUYrbSZT0gc7P5bJ9Fkp6$bXSDe5xSKU0NpLc9MhJ9CPorsn6A00g25pqrMIE54F4=",
+    "last_login": "2026-04-29T06:08:13.329Z",
+    "is_superuser": true,
+    "username": "Admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "sahayasiboni@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-04-29T05:28:50.267Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "e0fwcd95038zwekqsjkoafwegmgqxw0q",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCghc64dO8ZCDCDVA0kpV0Z765NutDtf-_9l_BhW4vfOi9-JnEWWpx-txjSg-sO6B7qrcnU6rrMUe6KPGiX10b8vBzu30EJvXxrZxSRsQ6RgoFILqsJlXY8jBgtWKORGByrOGYg4ATGphxNtoDDhCjeH885N3E:1wHy5l:ciuWh3MSI8OqND4sTMRGzwA-NVLMkdGJQwjalWv9uYY",
+    "expire_date": "2026-05-13T06:08:13.344Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "m412pix86b78huuz4o2fon9rsi0cswhz",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCghc64dO8ZCDCDVA0kpV0Z765NutDtf-_9l_BhW4vfOi9-JnEWWpx-txjSg-sO6B7qrcnU6rrMUe6KPGiX10b8vBzu30EJvXxrZxSRsQ6RgoFILqsJlXY8jBgtWKORGByrOGYg4ATGphxNtoDDhCjeH885N3E:1wHxTx:QiCmJDww9OUSek7oO4tddq0AtHshPTreW4uDtVTRrzo",
+    "expire_date": "2026-05-13T05:29:09.520Z"
+  }
+},
+{
+  "model": "blog.user",
+  "pk": 1,
+  "fields": {
+    "name": "sibomi",
+    "email": "sino@gmail.com",
+    "password": "Asdfj$2355"
+  }
+},
+{
+  "model": "image.img",
+  "pk": 1,
+  "fields": {
+    "image": "image/sneaker_M0vGO4H.png",
+    "categories": "Sneaker"
+  }
+},
+{
+  "model": "image.img",
+  "pk": 2,
+  "fields": {
+    "image": "image/boots1_T5QdndH.png",
+    "categories": "Boots"
+  }
+},
+{
+  "model": "image.img",
+  "pk": 3,
+  "fields": {
+    "image": "image/formal_kg91isN.png",
+    "categories": "Formal"
+  }
+},
+{
+  "model": "image.img",
+  "pk": 4,
+  "fields": {
+    "image": "image/running_XzUM2h0.png",
+    "categories": "Running"
+  }
+},
+{
+  "model": "image.img",
+  "pk": 5,
+  "fields": {
+    "image": "image/oxford_UBEmO4l.png",
+    "categories": "Oxford"
+  }
+},
+{
+  "model": "image.img",
+  "pk": 6,
+  "fields": {
+    "image": "image/sports_yjkn4rE.png",
+    "categories": "Sports Shoe"
+  }
+},
+{
+  "model": "image.img",
+  "pk": 7,
+  "fields": {
+    "image": "image/neck_Aa9PZjW.png",
+    "categories": "High Neck"
+  }
+},
+{
+  "model": "image.img",
+  "pk": 8,
+  "fields": {
+    "image": "image/loafer_haQfwYR.png",
+    "categories": "Loafer"
+  }
+},
+{
+  "model": "image.products",
+  "pk": 1,
+  "fields": {
+    "productimage": "image/new1_OzCg2V3.png",
+    "productname": "Stride Sneakers",
+    "currentprice": 435,
+    "previousprice": 450,
+    "descripe": "\"We have this product in United States warehouse. If destination means you can receive the parcel faster and earlier than expected\"",
+    "count": 2.0,
+    "categorie": 1
+  }
+},
+{
+  "model": "image.products",
+  "pk": 2,
+  "fields": {
+    "productimage": "image/new2_VYS9UT6.png",
+    "productname": "Thrivo Oxford Shoe",
+    "currentprice": 400,
+    "previousprice": 434,
+    "descripe": "\"We have this product in United States warehouse. If destination means you can receive the parcel faster and earlier than expected.\"",
+    "count": 2.0,
+    "categorie": 5
+  }
+},
+{
+  "model": "image.products",
+  "pk": 3,
+  "fields": {
+    "productimage": "image/new3_QM196uC.png",
+    "productname": "Strideon Boot",
+    "currentprice": 175,
+    "previousprice": 189,
+    "descripe": "We have this product in United States warehouse. If destination means you can receive the parcel faster and earlier than expected",
+    "count": 3.0,
+    "categorie": 2
+  }
+},
+{
+  "model": "image.products",
+  "pk": 4,
+  "fields": {
+    "productimage": "image/new7_NSJOAk5.png",
+    "productname": "Formal Shoe",
+    "currentprice": 399,
+    "previousprice": 419,
+    "descripe": "We have this product in United States warehouse. If destination means you can receive the parcel faster and earlier than expected.",
+    "count": 5.0,
+    "categorie": 3
+  }
+},
+{
+  "model": "image.products",
+  "pk": 5,
+  "fields": {
+    "productimage": "image/new5_5kCGlVl.png",
+    "productname": "Casual Sneaker",
+    "currentprice": 320,
+    "previousprice": 339,
+    "descripe": "We have this product in United States warehouse. If destination means you can receive the parcel faster and earlier than expected.",
+    "count": 0.0,
+    "categorie": 1
+  }
+},
+{
+  "model": "image.products",
+  "pk": 6,
+  "fields": {
+    "productimage": "image/new8_ukH0PMC.png",
+    "productname": "Running Shoe",
+    "currentprice": 280,
+    "previousprice": 300,
+    "descripe": "We have this product in United States warehouse. If destination means you can receive the parcel faster and earlier than expected.",
+    "count": 3.0,
+    "categorie": 4
+  }
+},
+{
+  "model": "image.products",
+  "pk": 7,
+  "fields": {
+    "productimage": "image/sports_Hk1HPZo.png",
+    "productname": "Sports Shoe",
+    "currentprice": 350,
+    "previousprice": 370,
+    "descripe": "We have this product in United States warehouse. If destination means you can receive the parcel faster and earlier than expected.",
+    "count": 1.0,
+    "categorie": 6
+  }
+},
+{
+  "model": "image.products",
+  "pk": 8,
+  "fields": {
+    "productimage": "image/new6_zvosUnN.png",
+    "productname": "High Neck",
+    "currentprice": 378,
+    "previousprice": 395,
+    "descripe": "We have this product in United States warehouse. If destination means you can receive the parcel faster and earlier than expected.",
+    "count": 4.0,
+    "categorie": 7
+  }
+},
+{
+  "model": "image.products",
+  "pk": 9,
+  "fields": {
+    "productimage": "image/loafer_NyKlaPe.png",
+    "productname": "Loafer",
+    "currentprice": 550,
+    "previousprice": 588,
+    "descripe": "We have this product in United States warehouse. If destination means you can receive the parcel faster and earlier than expected.",
+    "count": 5.0,
+    "categorie": 8
+  }
+},
+{
+  "model": "image.products",
+  "pk": 10,
+  "fields": {
+    "productimage": "image/sneaker1_T4BlIoZ.png",
+    "productname": "Sneaker",
+    "currentprice": 150,
+    "previousprice": 170,
+    "descripe": "A shoe is a footwear designed to protect and support the feet during walking, running, or daily activities.",
+    "count": 4.0,
+    "categorie": 1
+  }
+}
+]
