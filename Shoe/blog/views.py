@@ -23,43 +23,83 @@ def get_users(request):
     serializer=UserSerializer(users,many=True)
     return Response({"totalcount":d,'data':serializer.data})
 
-@csrf_exempt
-@api_view(['POST']) #method type
+
+@api_view(['POST'])
 def create_user(request):
-    name=request.data.get('name')
-    email=request.data.get('email')
-    password=request.data.get('password')
+    name = (request.data.get('name') or "").strip()
+    email = (request.data.get('email') or "").strip()
+    password = request.data.get('password') or ""
 
-    if name.strip()=='' :
-        return Response({'message':"Name should not start or end with spaces"},status=status.HTTP_400_BAD_REQUEST)
-    elif User.objects.filter(email=email).exists():
-       return Response({'message':"Mail already exists"},status=status.HTTP_400_BAD_REQUEST)
-    elif len(password) < 8:
-        return Response({'message': "Password must be at least 8 characters"},
-        status=status.HTTP_400_BAD_REQUEST)
-
-    elif not re.search(r'[A-Z]', password):  
+    # Name validation
+    if not name:
         return Response(
-        {'message': "Password must contain at least one uppercase letter"},
-        status=status.HTTP_400_BAD_REQUEST)
+            {'message': "Name is required"},
+            status=status.HTTP_400_BAD_REQUEST
+        )
+
+    # Email validation
+    elif not email:
+        return Response(
+            {'message': "Email is required"},
+            status=status.HTTP_400_BAD_REQUEST
+        )
+
+    elif User.objects.filter(email=email).exists():
+        return Response(
+            {'message': "Mail already exists"},
+            status=status.HTTP_400_BAD_REQUEST
+        )
+
+    # Password validation
+    elif not password:
+        return Response(
+            {'message': "Password is required"},
+            status=status.HTTP_400_BAD_REQUEST
+        )
+
+    elif len(password) < 8:
+        return Response(
+            {'message': "Password must be at least 8 characters"},
+            status=status.HTTP_400_BAD_REQUEST
+        )
+
+    elif not re.search(r'[A-Z]', password):
+        return Response(
+            {'message': "Password must contain at least one uppercase letter"},
+            status=status.HTTP_400_BAD_REQUEST
+        )
 
     elif not re.search(r'[a-z]', password):
-        return Response( {'message': "Password must contain at least one lowercase letter"},
-        status=status.HTTP_400_BAD_REQUEST)
+        return Response(
+            {'message': "Password must contain at least one lowercase letter"},
+            status=status.HTTP_400_BAD_REQUEST
+        )
 
     elif not re.search(r'\d', password):
-        return Response({'message': "Password must contain at least one number"},
-        status=status.HTTP_400_BAD_REQUEST)
+        return Response(
+            {'message': "Password must contain at least one number"},
+            status=status.HTTP_400_BAD_REQUEST
+        )
 
     elif not re.search(r'[@$!%*?&]', password):
-        return Response({'message': "Password must contain at least one special character"},
-        status=status.HTTP_400_BAD_REQUEST)
-    else:
-        serializer= UserSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data,status=status.HTTP_201_CREATED)
-        return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
+        return Response(
+            {'message': "Password must contain at least one special character"},
+            status=status.HTTP_400_BAD_REQUEST
+        )
+
+    # Save user
+    data = request.data.copy()
+    data['name'] = name
+    data['email'] = email
+    data['password'] = password
+
+    serializer = UserSerializer(data=data)
+
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['post'])
 def login_user(request):
