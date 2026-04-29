@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,6 +26,10 @@ SECRET_KEY = 'django-insecure-ok)79$wx($b4-lu+p%4zjaqs7t72jj$m=(!)&6jbrk3wxzjy9e
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Application definition
@@ -47,6 +51,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -59,11 +64,10 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
     "https://shoe-backend-oz5k.onrender.com",
-    "http://localhost:3000",
-    "http://localhost:3001",
-    "http://localhost:3002"
+    "http://localhost:3000"
 ]
 
+WSGI_APPLICATION = 'Shoe.Shoe.wsgi.application'
 ROOT_URLCONF = 'Shoe.Shoe.urls'
 
 TEMPLATES = [

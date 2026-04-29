@@ -26,9 +26,9 @@ def get_users(request):
 
 @api_view(['POST'])
 def create_user(request):
-    name = (request.data.get('name') or "").strip()
-    email = (request.data.get('email') or "").strip()
-    password = request.data.get('password') or ""
+    name = (request.data.get('name') ),
+    email = (request.data.get('email') ),
+    password = request.data.get('password') 
 
     # Name validation
     if not name:
