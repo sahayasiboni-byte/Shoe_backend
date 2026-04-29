@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
 # Create your views here.
 import re
 from rest_framework.decorators import api_view
@@ -21,7 +23,7 @@ def get_users(request):
     serializer=UserSerializer(users,many=True)
     return Response({"totalcount":d,'data':serializer.data})
 
-
+@csrf_exempt
 @api_view(['POST']) #method type
 def create_user(request):
     name=request.data.get('name')
