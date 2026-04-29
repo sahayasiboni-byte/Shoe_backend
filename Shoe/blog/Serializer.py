@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import User,AddCart
-from image.serializer import productSerializer
+from Shoe.image.serializer import productSerializer
 
 
 class UserSerializer(serializers.ModelSerializer):

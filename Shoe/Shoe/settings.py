@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ok)79$wx($b4-lu+p%4zjaqs7t72jj$m=(!)&6jbrk3wxzjy9e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'Shoe.blog',
-    'image'
+    'Shoe.blog.apps.BlogConfig',
+    'Shoe.image.apps.ImageConfig',
 ]
 
 MIDDLEWARE = [
@@ -63,7 +63,7 @@ CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3002"
 ]
 
-ROOT_URLCONF = 'Shoe.urls'
+ROOT_URLCONF = 'Shoe.Shoe.urls'
 
 TEMPLATES = [
     {
@@ -80,7 +80,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Shoe.wsgi.application'
+WSGI_APPLICATION = 'Shoe.Shoe.wsgi.application'
 
 
 # Database

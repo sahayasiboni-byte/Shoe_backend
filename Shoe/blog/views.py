@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import User,AddCart
 from .Serializer import UserSerializer,AddtoCart,allProductSerializer
-from image.models import products
+from Shoe.image.models import products
 
 # from database
 

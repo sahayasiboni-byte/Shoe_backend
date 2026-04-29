@@ -1,5 +1,5 @@
 from django.db import models
-from image.models import products
+from Shoe.image.models import products
 
 class User(models.Model):
     name=models.CharField(max_length=150)
