@@ -26,16 +26,13 @@ def get_users(request):
 
 @api_view(['POST'])
 def create_user(request):
-    name = (request.data.get('name') ),
-    email = (request.data.get('email') ),
-    password = request.data.get('password') 
+    name = (request.data.get('name') or "").strip()
+    email = (request.data.get('email') or "").strip()
+    password = request.data.get('password') or ""
 
     # Name validation
     if not name:
-        return Response(
-            {'message': "Name is required"},
-            status=status.HTTP_400_BAD_REQUEST
-        )
+        return Response({'message': "Name is required"},status=status.HTTP_400_BAD_REQUEST)
 
     # Email validation
     elif not email:
@@ -88,10 +85,11 @@ def create_user(request):
         )
 
     # Save user
-    data = request.data.copy()
-    data['name'] = name
-    data['email'] = email
-    data['password'] = password
+    data = {
+    "name": name,
+    "email": email,
+    "password": password,
+    }
 
     serializer = UserSerializer(data=data)
 
