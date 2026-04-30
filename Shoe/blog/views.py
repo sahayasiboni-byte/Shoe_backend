@@ -124,6 +124,17 @@ def add_to_cart(request):
     product_id = request.data.get("product")
     quantity = int(request.data.get("quantity", 1))
 
+    if not user_id:
+        return Response({"error": "User ID is required"}, status=400)
+
+    if not product_id:
+        return Response({"error": "Product ID is required"}, status=400)
+    
+    try:
+        quantity = int(quantity)
+    except:
+        return Response({"error": "Quantity must be number"}, status=400)
+
     try:
         user = User.objects.get(id=user_id)
     except User.DoesNotExist:
@@ -161,7 +172,7 @@ def getcart_Userbyid(request, id):
     try:
         user = User.objects.get(id=id)
     except User.DoesNotExist:
-        return Response({"error": "User not found"}, status=404)
+        return Response({"error": "User not found","data":[]}, status=404)
 
     cart_items = AddCart.objects.filter(user=user)
 
