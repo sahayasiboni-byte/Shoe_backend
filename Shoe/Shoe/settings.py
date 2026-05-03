@@ -63,6 +63,7 @@ MIDDLEWARE = [
 CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
+    "https://shoe-website-rose-eight.vercel.app/signup",
     "https://shoe-backend-oz5k.onrender.com",
     "http://localhost:3000"
 ]
