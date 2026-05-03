@@ -166,6 +166,16 @@ def getcart_users(request):
     return Response({"totalcount":d,'data':serializer.data})
 
 
+@api_view(['DELETE'])
+def delete_cart(request, pk):
+    try:
+        cart_item = AddCart.objects.get(pk=pk)
+        cart_item.delete()
+        return Response({"message": "Cart item deleted"}, status=status.HTTP_204_NO_CONTENT)
+    except AddCart.DoesNotExist:
+        return Response({"error": "Cart item not found"}, status=status.HTTP_404_NOT_FOUND)
+
+
 @api_view(['GET'])
 def getcart_Userbyid(request, id):
 
