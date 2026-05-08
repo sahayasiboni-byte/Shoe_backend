@@ -194,3 +194,28 @@ def getcart_Userbyid(request, id):
     }, status=200)
 
 
+@api_view(['PUT'])
+def update_quantity(request, pk):
+
+    try:
+        cart = AddCart.objects.get(id=pk)
+    except AddCart.DoesNotExist:
+        return Response({"message": "Cart not found"}, status=404)
+
+    action = request.data.get("action")
+
+    if action == "increase":
+        cart.quantity += 1
+
+    elif action == "decrease":
+        if cart.quantity > 1:
+            cart.quantity -= 1
+
+    cart.save()
+
+    return Response({
+        "message": "Quantity updated",
+        "quantity": cart.quantity
+    })
+
+
