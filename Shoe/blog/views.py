@@ -168,12 +168,9 @@ def getcart_users(request):
 
 @api_view(['DELETE'])
 def delete_cart(request, pk):
-    try:
-        cart_item = allProductSerializer.objects.get(id=pk)
-        cart_item.delete()
-        return Response({"message": "Cart item deleted"}, status=200)
-    except allProductSerializer.DoesNotExist:
-        return Response({"error": "Cart item not found"}, status=404)
+    product=AddCart.objects.get(pk=pk)
+    product.delete()
+    return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 @api_view(['GET'])
